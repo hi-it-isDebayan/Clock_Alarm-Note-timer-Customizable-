@@ -1,0 +1,319 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.5s, background-image 0.5s;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Panel */
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover,
+.nav-button.active {
+    background-color: #007BFF;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Sections Styling */
+.section {
+    display: none;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.section.active {
+    display: block;
+}
+
+/* Clock Section */
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#digital-clock {
+    font-size: 4rem;
+    color: #000000;
+    margin-bottom: 20px;
+    transition: color 0.5s, font-family 0.5s;
+}
+
+#analog-clock {
+    border: 2px solid #000000;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Timer Section */
+.timer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.timer input {
+    width: 60px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.timer button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#start-timer {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+#start-timer:hover {
+    background-color: #218838;
+}
+
+#stop-timer {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+#stop-timer:hover {
+    background-color: #c82333;
+}
+
+#reset-timer {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+#reset-timer:hover {
+    background-color: #e0a800;
+}
+
+#timer-display {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Alarm Section */
+.alarm {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.alarm input[type="time"] {
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.alarm button {
+    padding: 5px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#set-alarm {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+#set-alarm:hover {
+    background-color: #218838;
+}
+
+#clear-alarm {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+#clear-alarm:hover {
+    background-color: #c82333;
+}
+
+#alarm-status {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Notes Section */
+.notes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#note-input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+#save-note {
+    align-self: flex-end;
+    padding: 5px 15px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#save-note:hover {
+    background-color: #0056b3;
+}
+
+#notes-list {
+    margin-top: 20px;
+}
+
+.note-item {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.note-item textarea {
+    width: 100%;
+    height: 60px;
+    border: none;
+    resize: vertical;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.delete-note {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 2px 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.delete-note:hover {
+    background-color: #c82333;
+}
+
+/* Customization Section */
+.customization-section {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.customization-option {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customization-option label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.customization-option input[type="color"],
+.customization-option input[type="file"],
+.customization-option select {
+    flex: 2;
+}
+
+#reset-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        flex: 1 1 45%;
+        margin: 5px;
+    }
+
+    #analog-clock {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #digital-clock {
+        font-size: 3rem;
+    }
+
+    .timer input {
+        width: 50px;
+    }
+
+    #analog-clock {
+        width: 120px;
+        height: 120px;
+    }
+}
